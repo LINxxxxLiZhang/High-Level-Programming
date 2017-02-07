@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>tick4tb</name></assembly>
+<members>
+<member name="M:TestEnvt.Envt.makeEnvironment``1">
+<summary>
+ dummy environment function which always returns 
+</summary>
+</member>
+<member name="M:TestEnvt.Program.runTest``2(Microsoft.FSharp.Core.FSharpFunc{TestEnvt.Program.CommandSpec,``0},Microsoft.FSharp.Collections.FSharpList{TestEnvt.Program.CommandSpec},Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.FSharpFunc{``0,``1}})">
+<summary>
+ Test environment envt with comlist commands
+ A new envt is constructed, given commands
+ results and final var values are compared
+ with the model envt
+</summary>
+</member>
+<member name="P:TestEnvt.Program.makeParseCmd">
+<summary>
+ Generate command string for Parse from cmd
+</summary>
+</member>
+<member name="M:TestEnvt.Program.makeWordList(TestEnvt.Program.CommandSpec)">
+<summary>
+ Generate list of string representing words for cmd
+</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,9 @@
+C:\google\fsharp-tutor\images\expressions\exp-vs\bin\Debug\tiny_vs.exe.config
+C:\google\fsharp-tutor\images\expressions\exp-vs\bin\Debug\tiny_vs.XML
+C:\google\fsharp-tutor\images\expressions\exp-vs\bin\Debug\tiny_vs.exe
+C:\google\fsharp-tutor\images\expressions\exp-vs\bin\Debug\tiny_vs.pdb
+C:\google\fsharp-tutor\images\expressions\exp-vs\bin\Debug\FSharp.Core.dll
+C:\google\fsharp-tutor\images\expressions\exp-vs\bin\Debug\FSharp.Core.xml
+C:\google\fsharp-tutor\images\expressions\exp-vs\obj\Debug\exp-vs.fsprojResolveAssemblyReference.cache
+C:\google\fsharp-tutor\images\expressions\exp-vs\obj\Debug\tiny_vs.exe
+C:\google\fsharp-tutor\images\expressions\exp-vs\obj\Debug\tiny_vs.pdb

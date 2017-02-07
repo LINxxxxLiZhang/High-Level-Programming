@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{A4110DCB-7740-4B78-8811-5AC34D08F0E2}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WS4.fsx">
+    <Files>
+      <File FileName="../../WorkSheet4.fsx" Line="8" Column="5" />
+      <File FileName="WS4.fsx" Line="2" Column="5" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.exp-vs PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>tiny_vs</name></assembly>
+<members>
+<member name="T:Expr.Common.TraceInfo">
+<summary>
+ all trace messages so far
+</summary>
+</member>
+<member name="T:Expr.Common.TraceItem">
+<summary>
+ Single message stored with key for later printing
+</summary>
+</member>
+<member name="T:Expr.Common.TraceKey">
+<summary>
+ D.U. specifying all classes of trace printout
+</summary>
+</member>
+<member name="M:Expr.Common.ppT``3(Microsoft.FSharp.Collections.FSharpList{``0},``1,Microsoft.FSharp.Collections.FSharpList{System.Tuple{``0,``2}})">
+<summary>
+ return traceItem messages as filtered by keyList
+</summary>
+</member>
+<member name="M:Expr.Common.traceWrap``2(Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.FSharpFunc{Expr.Common.TraceKey,Microsoft.FSharp.Core.FSharpFunc{System.String,Microsoft.FSharp.Core.Unit}},Microsoft.FSharp.Core.FSharpFunc{``0,``1}},``0,Microsoft.FSharp.Collections.FSharpList{System.Tuple{Expr.Common.TraceKey,System.String}})">
+<summary>
+ Wraps pFun providing traceFunc to it as 1st parameter to do tracing 
+</summary>
+</member>
+<member name="M:Expr.Common.cprintf``1(System.ConsoleColor,Microsoft.FSharp.Core.PrintfFormat{``0,Microsoft.FSharp.Core.Unit,System.String,Microsoft.FSharp.Core.Unit})">
+<summary>
+ coloured printf (use e.g. c = System.ConsoleColor.Blue)
+</summary>
+</member>
+<member name="M:Expr.Evaluater.eval(Microsoft.FSharp.Core.FSharpFunc{Expr.Common.TraceKey,Microsoft.FSharp.Core.FSharpFunc{System.String,Microsoft.FSharp.Core.Unit}},Expr.Common.AST)">
+<summary>
+ evaluate an AST returning the numeric value
+</summary>
+</member>
+<member name="M:Expr.Parser.parse``1(``0,Microsoft.FSharp.Collections.FSharpList{Expr.Common.Token})">
+<summary>
+ parse tokens using trace for tracing and returnung the AST
+</summary>
+</member>
+<member name="M:Expr.Tokeniser.charListStartsWith(Microsoft.FSharp.Collections.FSharpList{System.Char},System.String)">
+<summary>
+ true if all the characters in string str match a starting prefix of character list x
+</summary>
+</member>
+<member name="M:Expr.Tokeniser.isOpInList(System.Char,Microsoft.FSharp.Collections.FSharpList{System.Char})">
+<summary>
+ character op is in list lst
+</summary>
+</member>
+<member name="M:Expr.Tokeniser.isAlphaNum(System.Char)">
+<summary>
+ character is alphanumeic (allowed in symbol)
+</summary>
+</member>
+<member name="M:Expr.Tokeniser.isDigit(System.Char)">
+<summary>
+ character is a decimal digit
+</summary>
+</member>
+<member name="M:Expr.Tokeniser.isAlpha(System.Char)">
+<summary>
+ character is alphabetic
+</summary>
+</member>
+<member name="M:Expr.Tokeniser.isNewLine(System.Char)">
+<summary>
+ charater is new line
+</summary>
+</member>
+<member name="M:Expr.Tokeniser.isWhiteSpace(System.Char)">
+<summary>
+ character is white sppace
+</summary>
+</member>
+<member name="M:Expr.Tokeniser.implode(Microsoft.FSharp.Collections.FSharpList{System.Char})">
+<summary>
+ convert char list into string
+</summary>
+</member>
+<member name="M:Expr.Tokeniser.explode(System.String)">
+<summary>
+ convert string into char list
+</summary>
+</member>
+</members>
+</doc>
