@@ -1,8 +1,7 @@
-let sineSeries x n = //x:float, n:int
-  let pow a b = a ** (float b)
-  let factorial a = [1.0..(float a)] |> List.reduce (*)
-  let term i = (pow x (2*i+1)) * (pow -1.0 i) / factorial (2*i+1)
-  [0..n] |> List.map term |> List.reduce (+)
+let sineSeries (x:float,n:int) :float =
+    let factorial i = [1.0..(float (2*i+1))] |> List.reduce (*)
+    let power x i = x ** (float i)
+    let term i = (power -1.0 i) * (power x (2*i+1)) / factorial i
+    [0..n] |> List.map term |> List.reduce (+)
 
-
-printfn "result: %A" (sineSeries 2.0 6)
+printfn "result: %A" (sineSeries (2.0,6))

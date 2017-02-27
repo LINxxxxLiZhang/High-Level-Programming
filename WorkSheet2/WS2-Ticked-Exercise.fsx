@@ -2,16 +2,13 @@
 /// The output list is of the largest prime factors in the corresponding same order. 
 /// The code should work efficiently for long lists.
 
-let findLargestPrimeFactor (lst:int64 list)= //int64 list -> int64 list
+let findLargestPrimeFactor (inLst:int64 list) :int64 list =
+    let rec find (p:int64) (x:int64) =
+        match (x%p = 0L) && (x>p) with
+        | true -> find p (x/p)
+        | false when p*p>x -> x
+        | false -> find (p+1L) x 
 
-    let rec findLargestPrimeFactorTR' p (input:int64) =
-        match (input % p = 0L) && (input > p) with
-        | true -> findLargestPrimeFactorTR' p (input/p)     
-        | false when (p*p > input) -> input      ///optimisation 1
-        | false when (input <= p) -> p           ///optimisation 2
-        | _ -> findLargestPrimeFactorTR' (p+1L) input
-    lst |> List.map (fun x -> findLargestPrimeFactorTR' 2L x)
-
-/// Note that list does not support larger literals, so for testing I prefer using array for larger literals then call Array.ToList 
-let a = [|13L; 15L; 268435459L; 1099511627689L; 26843L; 1L; 2L; 3L; 21L|]
-printfn "findLargestPrimeFactor = %A" (findLargestPrimeFactor (Array.toList a))
+    inLst |> List.map (fun x -> find 2L x)
+let a = [13L; 15L; 268435459L; 1099511627689L; 26843L; 1L; 2L; 3L; 21L]
+printfn "findLargestPrimeFactor = %A" (findLargestPrimeFactor a)
