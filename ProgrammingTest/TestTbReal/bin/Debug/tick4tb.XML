@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>HlpTest</name></assembly>
+<members>
+<member name="M:TestCode.Answer.maxDiffByMonthYearStation``1(Microsoft.FSharp.Collections.FSharpList{Model.Types.WeatherData})">
+<summary>
+ return the maximum (positive) time difference in days between any two not necessarily distinct readings in wsl
+ for any given month, year and station (MYS)
+ maximise over all month,year,station combinations
+ ignore MYS with no readings
+ return none if there are no readings
+ wsl: Weatherdata list
+</summary>
+</member>
+<member name="M:TestCode.Answer.monthReadings(Microsoft.FSharp.Collections.FSharpList{Model.Types.WeatherData})">
+<summary>
+ return all weather data in wsl in a map keyed by month
+ wsl: WeatherData list
+</summary>
+</member>
+<member name="M:TestCode.Answer.yearReadings(Microsoft.FSharp.Collections.FSharpList{Model.Types.WeatherData})">
+<summary>
+ return all weather data in wsl in a map keyed by year
+ wsl: WeatherData list
+</summary>
+</member>
+<member name="M:TestCode.Answer.stationReadings(Microsoft.FSharp.Collections.FSharpList{Model.Types.WeatherData})">
+<summary>
+ return all weather data in wsl in a map keyed by station
+ wsl: WeatherData list
+</summary>
+</member>
+<member name="M:TestCode.Answer.timeDiff(Model.Types.Time,Model.Types.Time)">
+<summary>
+ Return the time difference (in days) between t1 and t2
+ If t1 is before t2 return a negative value
+ t1: Time
+ t2: Time
+ NB the implementation CANNOT use System.DateTime! Do it yourself!
+</summary>
+</member>
+<member name="M:TestCode.Answer.timeCompare(Model.Types.Time,Model.Types.Time)">
+<summary>
+ Compare t1 with t2, returning TimeOrder value
+ t1: Time
+ t2: Time
+</summary>
+</member>
+<member name="M:TestCode.Answer.timeOrder(System.Int32,System.Int32,Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Model.Types.TimeOrder})">
+<summary>
+ If t1 &gt; t2 return After, if t1 &lt; t2 return Before, if t1 = t2 return f()
+ t1: int
+ t2: int
+ f: Unit -&gt; TimeOrder. Result if t1 = t2
+</summary>
+</member>
+<member name="M:TestCode.Answer.daysInYear(System.Int32)">
+<summary>
+ Number of days in given year (356 if year is divisible by 4 else 355)
+ y: int year
+</summary>
+</member>
+<member name="M:TestCode.Answer.timeToYearEnd(Model.Types.Time)">
+<summary>
+ number of days to end of year from Time value
+ Dec 31 = 1, Jan 1 = 355 or 356
+ tim: Time time value
+</summary>
+</member>
+<member name="M:TestCode.Answer.daysOfMonth(System.Int32,Model.Types.Month)">
+<summary>
+ number of days in month
+ month: Month (month)
+ year: int (year)
+ Sept Apr Jun Nov = 30, Feb = 29 (year divisible by 4) or 28. All others 31
+</summary>
+</member>
+<member name="M:TestCode.Answer.mInt(Model.Types.Month)">
+<summary>
+ number of Month (January = 1, December = 12)
+ m: Month (month)
+</summary>
+</member>
+<member name="M:TestCode.TestBench.testSizedArrayProperty``1(System.Int32,System.String,Microsoft.FSharp.Core.FSharpFunc{``0[],System.Object})">
+<summary>
+ n - lenth of array of random data
+ arrayFun - function to test    
+</summary>
+</member>
+<member name="M:TestCode.TestBench.testProperty3``7(System.String,Microsoft.FSharp.Core.FSharpFunc{Model.Types.TestResults,Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,Microsoft.FSharp.Core.FSharpFunc{``2,``3}}}}},Microsoft.FSharp.Core.FSharpFunc{``4,``0},Microsoft.FSharp.Core.FSharpFunc{``5,``1},Microsoft.FSharp.Core.FSharpFunc{``6,``2})">
+<summary>
+ test function with three parameters
+ f = function to test
+ p1c,p2c,p3c = conversion functions for parameters randomised by FsCheck                           
+</summary>
+</member>
+<member name="M:TestCode.TestBench.testProperty2``5(System.String,Microsoft.FSharp.Core.FSharpFunc{Model.Types.TestResults,Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.FSharpFunc{``0,Microsoft.FSharp.Core.FSharpFunc{``1,``2}}}},Microsoft.FSharp.Core.FSharpFunc{``3,``0},Microsoft.FSharp.Core.FSharpFunc{``4,``1})">
+<summary>
+ test function with two parameters
+ f = function to test
+ p1c,p2c = conversion functions for parameters randomised by FsCheck              
+</summary>
+</member>
+<member name="M:TestCode.TestBench.testProperty1``3(System.String,Microsoft.FSharp.Core.FSharpFunc{Model.Types.TestResults,Microsoft.FSharp.Core.FSharpFunc{Microsoft.FSharp.Core.Unit,Microsoft.FSharp.Core.FSharpFunc{``0,``1}}},Microsoft.FSharp.Core.FSharpFunc{``2,``0})">
+<summary>
+ test function with one parameter
+ numTests = number of tests to run
+ f = function to test
+ p1c = conversion function for parameter randomised by FsCheck
+</summary>
+</member>
+<member name="P:TestCode.TestBench.eConfig">
+<summary>
+ configuration for Expecto
+</summary>
+</member>
+<member name="P:TestCode.TestBench.fsConfig">
+<summary>
+ configuration for FsCheck
+</summary>
+</member>
+<member name="P:TestCode.TestBench.actual">
+<summary>
+ the current answer to test
+</summary>
+</member>
+<member name="P:TestCode.TestBench.expected">
+<summary>
+ the correct answer
+</summary>
+</member>
+</members>
+</doc>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>Model</name></assembly>
+<members>
+<member name="M:Model.Model.maxDiff(Microsoft.FSharp.Collections.FSharpList{Model.Types.WeatherData})">
+<summary>
+ wsl must be non-empty
+ returns the maximum difference in times in wsl
+</summary>
+</member>
+</members>
+</doc>

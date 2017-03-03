@@ -96,9 +96,10 @@ module Program=
         InitCache defaultParas.WorkFileDir // read the currently cached info from disk to speed things up
         let tests = 
             testList "Visual tests" [
-                VisualUnitTest "SUB test" "SUB R0, R0, #1" "0000" [R 0, -1]
-                VisualUnitTest "SUBS test" "SUBS R0, R0, #0" "0110" [R 0, 0]
-                VisualUnitTest "This ADDS test should fail" "ADDS R0, R0, #4" "0000" [R 0, 4; R 1, 1] // R1 should be 0 but is specified here as 1
+                //VisualUnitTest "SUB test" "SUB R0, R0, #1" "0000" [R 0, -1]
+                //VisualUnitTest "SUBS test" "SUBS R0, R0, #0" "0110" [R 0, 0]
+                VisualUnitTest "ADD test" "ADD R1, R1, #4" "0000" [R 1, 4]
+                //VisualUnitTest "This ADDS test should fail" "ADDS R0, R0, #4" "0010" [R 0, 4; R 1, 0] // R1 should be 0 but is specified here as 1
             ]
         let rc = runTests defaultConfig tests
         System.Console.ReadKey() |> ignore                

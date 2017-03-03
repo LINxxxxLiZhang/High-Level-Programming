@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+<assembly><name>HlpTest</name></assembly>
+<members>
+<member name="P:TestCode.Answer.theAnswer">
+<summary>
+ Record containing answers. Fields not defined here will default to &apos;noAnswer&apos;
+</summary>
+</member>
+<member name="P:TestCode.TestBench.expected">
+<summary>
+ runs commandLst using runtestFun on both testCode and modelCode and compares outputs
+ returns false if outputs differ, also printing out the input and outputs
+</summary>
+</member>
+<member name="P:TestCode.Types.defaultAnswer">
+<summary>
+ default answer with no question answers implemented
+</summary>
+</member>
+</members>
+</doc>
